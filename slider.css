@@ -1,0 +1,38 @@
+body {
+  background-color: #000;
+}
+
+* { 
+  margin:0; 
+  padding:0;
+} 
+
+#slide { 
+  /*box-shadow: 0 0 8px #000; */
+  height: 600px; 
+  margin: 50px auto; 
+  overflow: hidden;
+  position: relative; 
+  width: 650px; 
+} 
+
+#slide img { 
+  box-shadow: 2px 0 8px #000;
+  display: none; 
+  left: 0; 
+  position: absolute; 
+  z-index: 1; 
+} 
+
+#slide p { 
+  background: rgba(0,0,0,0.5); 
+  bottom: 0; 
+  color: #fff; 
+  font-family: Arial; 
+  font-size: 14px; 
+  left: 0; 
+  padding: 10px; 
+  position: absolute; 
+  width: 100%; 
+  z-index:2; 
+}
