@@ -1,0 +1,16 @@
+# Slider
+Slider que usa requisições e respostas em JSON para visualização
+
+h1. Modo de usar 
+
+Para usar esse slider é  preciso conhecer algumas configurações dele antes!
+
+bc. settings = {
+  time: 1000,
+  album: new Array(),
+  index: 0,
+  urlFetch: 'api/get/fotos.php',
+  tag: 'algumParametroParaAUrlFetch',
+  idPhoto: ''
+};
+
