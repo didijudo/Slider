@@ -30,6 +30,8 @@ Para iniciar basta criar o segunte esqueleto HTML
 bc. <div id="slider"></div> 
 
 E o seguinte script
-bc. <script type="text/javascript">
-  new Slider().init();
+
+bc. <script type="text/javascript"> 
+  new Slider().init(); 
 </script>
+
