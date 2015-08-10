@@ -1,4 +1,5 @@
 h1. Slider
+
 Slider que usa requisições e respostas em JSON para visualização
 
 h1. Modo de usar 
