@@ -15,3 +15,21 @@ bc. settings = {
   idPhoto: ''
 };
 
+"time" é o tempo de transição entre as fotos!
+"urlFetch" é a URL que vai retornar um JSON com as fotos!
+
+A função "loadPhotos" é responsável por colocar as fotos na página!!
+
+A função markerView utiliza uma outra URL para marcar uma foto como visualizada, assim a foto marcada como visualizada não retornará no próximo carregamento.
+
+
+h1. Iniciando
+
+Para iniciar basta criar o segunte esqueleto HTML
+
+bc. <div id="slider"></div> 
+
+E o seguinte script
+bc. <script type="text/javascript">
+  new Slider().init();
+</script>

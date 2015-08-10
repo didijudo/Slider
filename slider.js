@@ -10,27 +10,27 @@ function Slider() {
   };
 
   Slider.prototype.init = function() {
-    setInterval(self.mostraProxima, settings.time);
+    setInterval(self.showNext, settings.time);
   }
   
   // Função que pode ser utilizada para marcar se uma foto já foi vista usando
   // uma requisição a uma URL para isso
-  Slider.prototype.marcarVisualizada = function() {
+  Slider.prototype.markerView = function() {
     $.ajaxSetup({
       async: true
     });
     $.post('/api/photos/viewered', {'idPhoto': settings.idPhoto});
   };
 
-  Slider.prototype.mostraProxima = function() {
+  Slider.prototype.showNext = function() {
     if (settings.index == settings.album.length) {
-      self.carregaFotos(settings.urlFetch, settings.tag);
+      self.loadPhotos(settings.urlFetch, settings.tag);
 
       //Se não tiver fotos aprovadas mostre fotos padrão.
       if (settings.index == settings.album.length) {
         var urlPadrao = '';
         var tag = '';
-        self.carregaFotos(url, tag);
+        self.loadPhotos(url, tag);
       }
     }
 
@@ -44,11 +44,11 @@ function Slider() {
         .fadeIn(1500);
       settings.idPhoto = settings.album[settings.index].id;
     }
-    self.marcarVisualizada(settings.idPhoto);
+    self.markerView(settings.idPhoto);
     settings.index++;
   };
 
-  Slider.prototype.carregaFotos = function(url, tag) {
+  Slider.prototype.loadPhotos = function(url, tag) {
     var that = settings;
     $.ajaxSetup({
       async: false
